@@ -1,0 +1,18 @@
+
+# conda remove --name rtdip-sdk --all
+# 
+# conda env create -f environment.yml
+# conda env config vars set $namstring=$valstring
+# conda env config vars list
+name: rtdip-sdk
+channels:
+    - conda-forge
+    - defaults
+dependencies:
+    - python==3.11
+    - pip==23.0.1
+    - openjdk==11.0.15       
+    - pip:
+        - rtdip-sdk
+        - rtdip-sdk[pipelines]
+        -   rtdip-sdk[pipelines,pyspark]
